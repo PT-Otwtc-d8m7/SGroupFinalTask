@@ -20,7 +20,7 @@ function logout(){
        localStorage.removeItem('remember');
     }
     finally{
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     }
     console.log('adad')
 }
