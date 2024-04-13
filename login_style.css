@@ -1,0 +1,191 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+#blue{
+  width: 500px;
+  position: absolute;
+  bottom: 0%;
+}
+#cam{
+  width: 500px;
+  position: absolute;
+  right: 0;
+}
+#tron{
+  position: absolute;
+  bottom: 1%;
+  right: 20%;
+}
+.login{
+  width: 921.6px;
+  height: 637.2px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top:50px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+.sgroupimg{
+  overflow: hidden;
+  width: 460.8px;
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+}
+.listimg{
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+.listimg::after{
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(191, 207, 227,0.9);
+  position: absolute;
+}
+.listimg img{
+  width: 153px;
+  height: 106.2px;
+}
+#logo{
+  position: absolute;
+  top:38%;
+  right: 34%;
+}
+.loginbody{
+  width:460.8px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.header{
+  display: flex;
+  gap:50px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.Login{
+  width:100px ;
+  text-align: center;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.Register{
+  width:100px ;
+  text-align: center;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.input{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slow 1.5s;
+}
+.registerinput{
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  animation: slow 1.5s;
+}
+.boxinput{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 5px;
+}
+.boxinput input{
+  padding : 10px;
+  border-color: #5baec8;
+}
+input{
+  width: 250px;
+  height: 40px;
+}
+.checkbox input{
+  width: 20px;
+  height: 15px;
+}
+.checkbox{
+  margin-top: 15px;
+  width: 250px;
+  font-size: 14px;
+  color: #686868;
+}
+.buttonlogin{
+  width: 250px;
+  padding: 10px 0;
+  border-radius: 20px;
+  background-color: #00a6da;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-size: 16px;
+  animation: slow 1.5s;
+  cursor: pointer;}
+.hold{
+  border:0;
+  border-bottom: 3px;
+  border-style: solid;
+  border-color: #017a9e;
+}
+
+@media (max-width:937px) {
+ .login{
+  width: 460.8px;
+  height: 1274.4px;
+  flex-direction: column;
+ }
+}
+@media (max-width:485px) {
+  .login{
+   width: 99vw;
+   height: 100%;
+   flex-direction: column;
+  }
+  #blue{
+      width: 99%;
+      position: absolute;
+      bottom: 0%;
+  }
+  #cam{
+      width: 99%;
+      position: absolute;
+      right: 0;
+  }
+  .sgroupimg{
+      width: 99%;
+  }
+  .listimg img{
+      width: 33%;
+      height: 106.2px;
+  }
+  .loginbody{
+      width: 99%;
+  }
+  .listimg{
+      width: 99%;
+
+  }
+}
+

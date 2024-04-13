@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="todo_style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background"></div>
+
+        <div class="formfix">
+            <div class="buttonclose">x</div>
+            <div class="title">Edit</div>
+            <div class="inputheader">
+                <input type="text" >
+            </div>
+            <div class="inputtitle">
+                <input type="text" value="asfdasfdasdfasdfasfda">
+            </div>
+            <div class="inputcontent">
+                    <textarea  id="" cols="0" rows="1"></textarea>
+            </div>
+            <div class="formfix_status">
+                <div class="sttodo">
+                    <input type="radio" name="status"> Todo
+                </div>
+                <div class="stdoing">
+                    <input type="radio" name="status"> Doing
+                </div>
+                <div class="stcompleted">
+                    <input type="radio" name="status"> Completed
+                </div>
+                <div class="stblocked">
+                    <input type="radio" name="status"> Blocked
+                </div>
+            </div>
+            <div class="buttonsubmit">Submit</div>
+        </div>
+
+        <form action = "" method = "POST" class ="form" id="form-1">
+            <div class="formnewtask">
+                <div class="buttonclose">x</div>
+                <div class="title">Add new task</div>
+                <div class="inputheader">
+                    <input id="category" class="form-input category-input" type="text" placeholder="Category" required>
+                </div>
+                <div class="inputtitle">
+                    <input id="title" class="form-input title-input" type="text" placeholder="Title" required>
+                </div>
+                <div class="inputcontent">
+                        <textarea  id="textarea" class="form-input content-input"placeholder="Content" id="" cols="0" rows="1" required></textarea>
+                </div>
+                <div class="buttonsubmit">Submit</div>
+            </div>
+            <div class="container_logo">
+                <img src="svgfile\logotash.svg" alt="">
+                <div class="buttonheader">
+                    <div class="logout">Logout</div>                    
+                    <div class="buttonnewtask">+ Newtask</div>
+                </div>
+            </div>
+        </form>
+        
+
+        <div class="container_body">
+            <div class="container_body_element_todo">
+                <div class="element_header">
+                    <div class="element_header_text">Todo</div>  
+                    <div class="element_header_sum">0</div>
+                </div>
+                <div class="element_line"></div>
+                <div class="element_task">
+                  
+                </div>
+            </div>
+
+            <div class="container_body_element_doing">
+                <div class="element_header">
+                    <div class="element_header_text">Doing</div>  
+                    <div class="element_header_sum">0</div>
+                </div>
+                <div class="element_line"></div>
+                <div class="element_task">
+                </div>
+            </div>
+
+            <div class="container_body_element_completed">
+                <div class="element_header">
+                    <div class="element_header_text">Completed</div>  
+                    <div class="element_header_sum">0</div>
+                </div>
+                <div class="element_line"></div>
+                    <div class="element_task">
+                    </div>
+            </div>
+
+            <div class="container_body_element_blocked">
+                <div class="element_header">
+                    <div class="element_header_text">Blocked</div>  
+                    <div class="element_header_sum">0</div>
+                </div>
+                <div class="element_line"></div>
+                    <div class="element_task">
+                    </div>
+            </div>
+
+           
+
+        </div>
+    </div>  
+    <script src="todo_main.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+          // Mong muốn của chúng ta
+          Validator({
+            form: '#form-1',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+              Validator.category('#category', 'Vui lòng nhập tên đầy đủ của bạn'),
+              Validator.title('#title','Vui lòng nhập tên đầy đủ của bạn'),
+              Validator.textarea('#textarea', 'Vui lòng nhập đầy đủ nội dung'),
+            ],
+            onSubmit: function (data) {
+              // Call API
+              console.log(data);
+            }
+          });
+        });
+  
+      </script>
+   
+</body>
+</html>
